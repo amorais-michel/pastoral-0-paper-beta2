@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+</head>
+<body>
+    <style>
+        body{
+        background-image:url("fundologo.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
+
+
+    }
+
+    #logo{
+    position: absolute; 
+    left: 17%; 
+    top: 2%; 
+}
+
+h1{
+    color: #223263;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+}
+.dados {
+    
+    height: 50%;
+    width: 40%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-color: #fff;
+    padding: 3rem;
+    margin-top: 15%;
+    margin-left: 30%;
+    border-radius: 50px 50px 50px 50px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    padding: 1rem 0;
+    color: #545454;
+    
+}
+
+.input-box {
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+    color: #545454;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 10px;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #545454;
+    background-color: #545454;
+    font-size: 0.8rem;
+    border-radius: 100px 100px 100px 100px;
+    margin-left: 10px;
+    flex-direction:column-reverse;
+}
+
+.input-box input:hover {
+    background-color:#223263;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid darkblue;
+}
+
+.input-box label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color:#545454;
+}
+
+.input-box input::placeholder {
+    color:white;
+}
+
+button{
+    background-color:#223263;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 200px;
+    height: 60px;
+    width: 250px;
+    border-radius: 100px 100px 100px 100px;
+    border: none !important;
+    border-radius: 10;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+}
+
+button:hover{
+    transform: scale(1.05);
+    background-color: blueviolet;
+}
+
+
+.sidenav{
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    display: block;
+}
+
+
+.sidenav a{
+    padding: 20px 20px 20px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: gray;
+    display: block;
+}
+
+
+.sidenav a.active{
+    background-color: #223263;
+    color: #f2f2f2;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .linha-vertical {
+  height: 50px;/*Altura da linha*/
+  border-left: 2px solid;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
+}
+  
+    </style>
+    <img src="Unilasalle.png" width="300" height="100" alt="logosite" id="logo"/> <!-- importando uma imagem -->
+
+        
+
+    <div class="sidenav">
+        <a  class = "active" href="">Serviços</a>
+        <a href="token.html">Gerar Token (Assinatura Eletrônica)</a>
+        <a href="gerador.html">Gerador de Termo de Adesão de Voluntáriado</a>
+        <a href="informacoes">Minhas informações</a>
+        <a href="#"></a>    
+    </div>
+<!-- Criando um formulario para receber os dados-->
+
+<form class= "dados">
+    
+<h1>Gerador de token</h1>
+    <form method="POST" class = "formDados">
+    
+      <!--   <div class="linha-vertical"></div> -->
+        <div class = "input-group">
+            <div class="input-box">
+
+                <label for="nome">CPF:</label> 
+                <input type="text" id="cpf" name="cpf" > 
+            </div>
+            
+            <div class="input-box">
+
+                <label for="Email">Email:</label> 
+                <input type="text" id="email" name="email" > 
+            </div>
+
+
+           
+                
+        </div>
+
+                    
+        </div>
+
+  
+              <br>
+              <br>
+
+
+              <div class = "btn">  
+             <button type="button" onclick="gerartoken()">Gerar token e enviar para o email</button>   
+             <div></div>
+             
+        </div>
+        
+        </form>
+</body>
+</html>
